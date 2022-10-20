@@ -29,7 +29,7 @@ function SearchBar(props) {
 
   // Fetch country names for dropdown
   useEffect(() => {
-    const url = `http://131.181.190.87:3000/countries`;
+    const url = `https://salty-refuge-23420.herokuapp.com/countries`;
     fetch(url)
       .then((res) => res.json())
       .then((countries) => {
@@ -180,7 +180,7 @@ function SearchBar(props) {
         <div className="col-lg-3 col-sm-12 d-flex my-2 my-lg-0">
           {props.showLimit ? (
             <>
-              <p class="my-2 mx-3">Limit: </p>
+              <p class="my-2 mx-3 d-none d-sm-block">Limit: </p>
 
               <Select
                 options={limitOptions}
